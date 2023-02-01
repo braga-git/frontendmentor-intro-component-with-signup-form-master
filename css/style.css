@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+:root {
+  --bg-color: hsl(0, 100%, 74%);
+  --free-trial-btn-color: hsl(154, 59%, 51%);
+  --free-trial-color: hsl(248, 32%, 49%);
+  --input-text-color: hsl(249, 10%, 26%);
+  --input-border-color: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  background-image: url(/images/bg-intro-desktop.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+.pageInfos {
+  color: white;
+  width: 500px;
+}
+.pageInfos .title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.3rem;
+  margin-bottom: 1.7rem;
+}
+.pageInfos .description {
+  line-height: 1.7rem;
+}
+.pageInfos .attribution {
+  font-size: 0.8rem;
+}
+.pageInfos .attribution a {
+  text-decoration: none;
+}
+
+.form {
+  width: 550px;
+}
+
+.freeTrial {
+  background-color: var(--free-trial-color);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+.freeTrial span {
+  font-weight: 600;
+}
+
+.formCard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.15);
+}
+.formCard label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.formCard label img {
+  display: none;
+  position: absolute;
+  top: 21%;
+  left: 90%;
+}
+.formCard input {
+  padding: 15px 35px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 0.1px;
+  border-color: var(--input-border-color);
+  font-weight: 600;
+  color: var(--input-text-color);
+}
+.formCard input:focus {
+  outline-width: 0.1px;
+  outline-color: var(--input-text-color);
+  outline-style: solid;
+}
+.formCard .errorPlaceholder::-webkit-input-placeholder {
+  color: var(--bg-color);
+}
+.formCard .errorSpan {
+  margin-top: 5px;
+  color: var(--bg-color);
+  text-align: end;
+  font-size: 0.65rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.formCard .freeTrialBtn {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: var(--free-trial-btn-color);
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+}
+.formCard .freeTrialBtn:hover {
+  background-color: hsla(154deg, 59%, 51%, 0.6);
+}
+.formCard .termsAndServices {
+  margin: 0;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--input-border-color);
+}
+.formCard .termsAndServices a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--bg-color);
+}
+
+@media (max-width: 1199px) {
+  .pageInfos .title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    background-image: url(/images/bg-intro-mobile.png);
+  }
+  .container {
+    flex-direction: column;
+    width: auto;
+  }
+  .pageInfos {
+    text-align: center;
+    padding-inline: 20px;
+  }
+  .formCard > input {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .container > * {
+    width: auto;
+  }
+  .pageInfos {
+    padding-inline: 50px;
+  }
+  .formCard {
+    padding: 25px;
+  }
+  .formCard input {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 460px) {
+  .pageInfos .title {
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
+}
+@media (max-width: 393px) {
+  .container {
+    padding: 25px;
+  }
+  .pageInfos {
+    padding: 0;
+  }
+  .pageInfos .title {
+    font-size: 1.7rem;
+    line-height: 2.3rem;
+  }
+  .freeTrial {
+    padding-inline: 70px;
+  }
+  .termsAndServices {
+    padding-inline: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
