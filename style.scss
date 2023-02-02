@@ -19,7 +19,7 @@ body {
     place-content: center;
     height: 100vh;
     background-color: var(--bg-color);
-    background-image: url(images/bg-intro-desktop.png);
+    background-image: url(/images/bg-intro-desktop.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -188,7 +188,7 @@ body {
 
 @media(max-width: 768px){
     body{
-        background-image: url(images/bg-intro-mobile.png);
+        background-image: url(/images/bg-intro-mobile.png);
     }
 
     .container{
